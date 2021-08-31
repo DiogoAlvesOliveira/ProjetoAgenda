@@ -1,0 +1,12 @@
+<% const i = [3, 4 , 6]; %>
+<% if( i.length > 0) { %>
+    <div class="row">
+        <div class="col my-3">
+          <div class="alert alert-danger">
+            <% i.forEach(i =>{ %>
+                <%= i %> <br>
+              <% }); %>
+          </div>
+        </div>
+      </div>
+      <% } %>
