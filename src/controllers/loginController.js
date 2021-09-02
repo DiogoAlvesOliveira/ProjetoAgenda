@@ -47,7 +47,7 @@ exports.login = async function (req,res) {
         });
     } catch(e){
         console.log('control', e);
-        res.render('404');
+        return res.render('404');
     }
     
 };

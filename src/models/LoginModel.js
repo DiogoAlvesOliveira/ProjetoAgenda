@@ -50,6 +50,7 @@ class Login{
 
         if(this.body.password.length < 5 || this.body.password.length >12) this.errors.push('Tamanho inválido para senha');
     }
+    
     cleanUp(){
         for(const key in this.body){
             if (typeof this.body[key] !== 'string'){
