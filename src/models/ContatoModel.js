@@ -49,6 +49,12 @@ class Contato{
             phone: this.body.phone,
         }
     }
+    async edit(id){
+        if(typeof id !== 'string') return; 
+        this.validation();
+        if(this.errors.length > 0) return;
+        this.contato = await ContatoModel.findByIdAndUpdate(id, this.body, { new: true});
+    }
 }
 
 module.exports = Contato;
