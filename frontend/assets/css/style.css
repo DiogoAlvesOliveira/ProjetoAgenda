@@ -65,3 +65,13 @@ body{
   background-color:#4fd8e8;
   background-image: linear-gradient(to right, rgba(255,255,255,.1), rgba(255,255,255,.4), rgba(255,255,255,0), rgba(255,255,255,.4));
 }
+.nav-link:hover{
+  background-color: var(--primary-color-light);
+  opacity: 10%;
+}
+.navbar-brand:hover{
+  opacity: 30%;
+}
+form button:hover{
+  opacity: 70%;
+}
