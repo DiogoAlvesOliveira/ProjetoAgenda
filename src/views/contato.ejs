@@ -12,24 +12,24 @@
     <% if(contato._id) { %>
     <form action="/contato/edit/<%= contato._id %>" method="POST">
       <% } else { %>
-        <form action="/contato/register" method="POST">
+        <form class="form-contato" action="/contato/register" method="POST">
         <% } %>
       <input type="hidden" name="_csrf" value=<%= csrfToken %>>
       <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Nome</label>
-        <input value="<%= contato.name %>"type="text" class="form-control" name="name">
+        <label for="name" class="form-label label-name">Nome</label>
+        <input value="<%= contato.name %>"type="text" class="form-control" name="name" id="name">
       </div>
       <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Sobrenome</label>
-        <input value="<%= contato.lastName %>"type="text" class="form-control" name="lastName">
+        <label for="last-name" class="form-label label-last-name">Sobrenome</label>
+        <input value="<%= contato.lastName %>"type="text" class="form-control" name="lastName" id="last-name">
       </div>
       <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Email</label>
-        <input value="<%= contato.email %>"type="email" class="form-control" name="email">
+        <label for="email" class="form-label label-email">Email</label>
+        <input value="<%= contato.email %>"type="email" class="form-control" name="email" id="email">
       </div>
       <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Telefone</label>
-        <input value="<%= contato.phone %>"type="tel" class="form-control" name="phone">
+        <label for="phone" class="form-label label-phone">Telefone</label>
+        <input value="<%= contato.phone %>"type="tel" class="form-control" name="phone" id="phone">
       </div>
       <button type="submit" class="btn btn-primary">Salvar</button>
     </form>

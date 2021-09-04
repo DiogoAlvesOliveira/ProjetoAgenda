@@ -56,3 +56,12 @@ form button {
 form button:hover {
   background: var(--primary-color-darker);
 }*/ 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+.error-text {
+  font-size: 12px;
+  color: green;
+}
+body{
+  background-color:#4fd8e8;
+  background-image: linear-gradient(to right, rgba(255,255,255,.1), rgba(255,255,255,.4), rgba(255,255,255,0), rgba(255,255,255,.4));
+}

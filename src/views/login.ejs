@@ -1,7 +1,7 @@
 <%- include('includes/head'); %>
 <%- include('includes/nav'); %>
 
-<div class="container">
+<div class="container"x>
   <div class="row">
     <div class="col-lg-2"></div>
     <div class="col-lg-8 my-3">
@@ -11,32 +11,34 @@
       <div class="row">
         <div class="col-lg">
           <h4>Faça seu cadastro</h4>
-          <form action="/login/register" method="POST">
+          <form class="form-cadastro" action="/login/register" method="POST">
             <input type="hidden" name="_csrf" value=<%= csrfToken %>>
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Email address</label>
-              <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <label for="email-cadastro" class="form-label label-email">Email address</label>
+              <input type="email" class="form-control" name="email" id="email-cadastro" aria-describedby="emailHelp">
             </div>
             <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Password</label>
-              <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+              <label for="password-cadastro" class="form-label label-password">Password</label>
+              <input type="password" name="password" class="form-control" id="password-cadastro">
             </div>
             <button type="submit" class="btn btn-primary">Criar conta</button>
           </form>
         </div>
         <div class="col-lg">
           <h4>Fazer login</h4>
-          <form action="/login/login" method="POST">
+          <form class="form-login" action="/login/login" method="POST">
             <input type="hidden" name="_csrf" value=<%= csrfToken %>>
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Email address</label>
-              <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <label for="email-login" class="form-label label-email">Email address</label>
+              <input type="email" class="form-control" name="email" id="email-login" aria-describedby="emailHelp">
             </div>
             <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Password</label>
-              <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+              <label for="password-login" class="form-label label-password">Password</label>
+              <input type="password" name="password" class="form-control" id="password-login">
             </div>
-            <button type="submit" class="btn btn-primary">Login</button>
+            <div class="mb-3">
+              <button type="submit" class="btn btn-primary">Login</button>
+            </div>
           </form>
         </div>
       </div>
